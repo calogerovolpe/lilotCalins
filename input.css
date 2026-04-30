@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@source "./**/*.php";
+
+@theme {
+  --color-brand-blue: #6da1cc;
+  --color-brand-red: #ed5f5f;
+  --color-brand-redHover: #d94c4c;
+
+  --font-sans: "Inter", sans-serif;
+}

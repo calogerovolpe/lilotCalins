@@ -1,34 +1,24 @@
 <!doctype html>
-<html lang="fr" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/output.css" />
-    <title>L'îlot Câlins - Sauvons des vies ensemble</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                blue: "#6da1cc",
-                red: "#ed5f5f",
-                redHover: "#d94c4c", // Une teinte légèrement plus foncée pour le survol
-              },
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"], // Police lisible et moderne
-            },
-          },
-        },
-      };
-    </script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<html <?php language_attributes(); ?> class="scroll-smooth">
+
+<head>
+  <meta charset="<?php bloginfo('charset'); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>L'îlot Câlins - Sauvons des vies ensemble</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/output.css" />
+
+  <?php wp_head(); ?>
+</head>
+
+<body <?php body_class("font-sans text-gray-800 bg-gray-50"); ?>>
+
   <body class="font-sans text-gray-800 bg-gray-50">
     <!-- NAVIGATION -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
@@ -36,32 +26,23 @@
         <div class="flex justify-between items-center h-20">
           <div class="flex items-center">
             <!-- Remplacer par le vrai logo -->
-            <span class="text-2xl font-bold text-brand-blue tracking-tight"
-              >L'îlot <span class="text-brand-red">Câlins</span></span
-            >
+            <span class="text-2xl font-bold text-brand-blue tracking-tight">L'îlot <span class="text-brand-red">Câlins</span></span>
           </div>
           <div class="hidden md:flex space-x-8 items-center">
             <a
               href="#mission"
-              class="text-gray-600 hover:text-brand-blue transition"
-              >Notre Mission</a
-            >
+              class="text-gray-600 hover:text-brand-blue transition">Notre Mission</a>
             <a
               href="#enfants"
-              class="text-gray-600 hover:text-brand-blue transition"
-              >Les Enfants</a
-            >
+              class="text-gray-600 hover:text-brand-blue transition">Les Enfants</a>
             <a
               href="#impact"
-              class="text-gray-600 hover:text-brand-blue transition"
-              >Notre Impact</a
-            >
+              class="text-gray-600 hover:text-brand-blue transition">Notre Impact</a>
           </div>
           <div>
             <a
               href="#don"
-              class="bg-brand-red text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-redHover transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
+              class="bg-brand-red text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-redHover transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
               Faire un don vital
             </a>
           </div>
@@ -73,34 +54,27 @@
     <header class="relative bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto">
         <div
-          class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 pt-16 lg:pt-24 px-4 sm:px-6 lg:px-8"
-        >
+          class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 pt-16 lg:pt-24 px-4 sm:px-6 lg:px-8">
           <div class="sm:text-center lg:text-left">
             <span
-              class="inline-block py-1 px-3 rounded-full bg-brand-red/10 text-brand-red text-sm font-semibold mb-4 border border-brand-red/20"
-              >Urgence absolue</span
-            >
+              class="inline-block py-1 px-3 rounded-full bg-brand-red/10 text-brand-red text-sm font-semibold mb-4 border border-brand-red/20">Urgence absolue</span>
             <h1
-              class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl leading-tight"
-            >
+              class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl leading-tight">
               <span class="block">Chaque minute compte</span>
               <span class="block text-brand-blue">pour leur survie.</span>
             </h1>
             <p
-              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-            >
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
               Des milliers d'enfants dans les pays en développement attendent
               une hospitalisation urgente. Sans vous, ils n'ont aucune chance.
               Avec vous, l'espoir renaît.
             </p>
             <div
-              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
-            >
+              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div class="rounded-full shadow">
                 <a
                   href="#don"
-                  class="w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-brand-red hover:bg-brand-redHover transition md:py-4 md:text-lg md:px-10"
-                >
+                  class="w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-brand-red hover:bg-brand-redHover transition md:py-4 md:text-lg md:px-10">
                   Je sauve une vie aujourd'hui
                 </a>
               </div>
@@ -113,8 +87,7 @@
         <img
           class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full opacity-90"
           src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-          alt="Enfant souriant malgré la maladie"
-        />
+          alt="Enfant souriant malgré la maladie" />
       </div>
     </header>
 
@@ -122,12 +95,10 @@
     <section id="don" class="py-20 bg-brand-blue/5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row"
-        >
+          class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
           <!-- Explication & Sensibilisation -->
           <div
-            class="lg:w-5/12 bg-brand-blue p-10 lg:p-12 text-white flex flex-col justify-center"
-          >
+            class="lg:w-5/12 bg-brand-blue p-10 lg:p-12 text-white flex flex-col justify-center">
             <h2 class="text-3xl font-bold mb-4">
               Votre don est leur seul remède.
             </h2>
@@ -142,14 +113,12 @@
                   class="h-6 w-6 text-white mr-3 opacity-80"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                  stroke="currentColor">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M5 13l4 4L19 7"
-                  />
+                    d="M5 13l4 4L19 7" />
                 </svg>
                 <span class="opacity-90">Paiement 100% sécurisé</span>
               </li>
@@ -158,14 +127,12 @@
                   class="h-6 w-6 text-white mr-3 opacity-80"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                  stroke="currentColor">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M5 13l4 4L19 7"
-                  />
+                    d="M5 13l4 4L19 7" />
                 </svg>
                 <span class="opacity-90">Déductible des impôts à 75%</span>
               </li>
@@ -174,18 +141,14 @@
                   class="h-6 w-6 text-white mr-3 opacity-80"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                  stroke="currentColor">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M5 13l4 4L19 7"
-                  />
+                    d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="opacity-90"
-                  >Transparence totale sur l'utilisation</span
-                >
+                <span class="opacity-90">Transparence totale sur l'utilisation</span>
               </li>
             </ul>
           </div>
@@ -200,115 +163,83 @@
             <div class="flex bg-gray-100 p-1 rounded-xl mb-8 relative">
               <button
                 id="tab-unique"
-                class="flex-1 bg-white shadow-sm text-gray-900 font-bold py-3 rounded-lg text-sm sm:text-base transition focus:outline-none relative z-10"
-              >
+                class="flex-1 bg-white shadow-sm text-gray-900 font-bold py-3 rounded-lg text-sm sm:text-base transition focus:outline-none relative z-10">
                 Don unique
               </button>
               <button
                 id="tab-mensuel"
-                class="flex-1 text-gray-500 hover:text-gray-800 font-semibold py-3 rounded-lg text-sm sm:text-base transition focus:outline-none relative z-10"
-              >
+                class="flex-1 text-gray-500 hover:text-gray-800 font-semibold py-3 rounded-lg text-sm sm:text-base transition focus:outline-none relative z-10">
                 Don mensuel
                 <span
-                  class="hidden sm:inline-block absolute -top-3 right-4 bg-brand-blue text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full"
-                  >Plus d'impact</span
-                >
+                  class="hidden sm:inline-block absolute -top-3 right-4 bg-brand-blue text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full">Plus d'impact</span>
               </button>
             </div>
 
             <!-- Grille des montants : Don Unique -->
             <div
               id="grid-unique"
-              class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"
-            >
+              class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <button
                 data-amount="20"
-                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
-              >
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none">
                 20 €
-                <span class="block text-xs font-normal text-gray-400 mt-1"
-                  >Soins basiques</span
-                >
+                <span class="block text-xs font-normal text-gray-400 mt-1">Soins basiques</span>
               </button>
               <button
                 data-amount="50"
-                class="donation-btn border-2 border-brand-red bg-brand-red/5 text-brand-red rounded-xl py-4 transition font-bold relative focus:outline-none"
-              >
+                class="donation-btn border-2 border-brand-red bg-brand-red/5 text-brand-red rounded-xl py-4 transition font-bold relative focus:outline-none">
                 <div
-                  class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-red text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full whitespace-nowrap"
-                >
+                  class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-red text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full whitespace-nowrap">
                   Le plus choisi
                 </div>
                 50 €
-                <span class="block text-xs font-normal text-brand-red/70 mt-1"
-                  >1 nuit d'hôpital</span
-                >
+                <span class="block text-xs font-normal text-brand-red/70 mt-1">1 nuit d'hôpital</span>
               </button>
               <button
                 data-amount="100"
-                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
-              >
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none">
                 100 €
-                <span class="block text-xs font-normal text-gray-400 mt-1"
-                  >Kit chirurgical</span
-                >
+                <span class="block text-xs font-normal text-gray-400 mt-1">Kit chirurgical</span>
               </button>
               <button
                 data-amount="250"
-                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
-              >
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none">
                 250 €
-                <span class="block text-xs font-normal text-gray-400 mt-1"
-                  >Sauve une vie</span
-                >
+                <span class="block text-xs font-normal text-gray-400 mt-1">Sauve une vie</span>
               </button>
             </div>
 
             <!-- Grille des montants : Don Mensuel (Cachée par défaut) -->
             <div
               id="grid-mensuel"
-              class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 hidden"
-            >
+              class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 hidden">
               <button
                 data-amount="10"
-                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
-              >
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none">
                 10 €
-                <span class="block text-xs font-normal text-gray-400 mt-1"
-                  >Matériel stérile</span
-                >
+                <span class="block text-xs font-normal text-gray-400 mt-1">Matériel stérile</span>
               </button>
               <button
                 data-amount="15"
-                class="donation-btn border-2 border-brand-red bg-brand-red/5 text-brand-red rounded-xl py-4 transition font-bold relative focus:outline-none"
-              >
+                class="donation-btn border-2 border-brand-red bg-brand-red/5 text-brand-red rounded-xl py-4 transition font-bold relative focus:outline-none">
                 <div
-                  class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-red text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full whitespace-nowrap"
-                >
+                  class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-red text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full whitespace-nowrap">
                   Impact régulier
                 </div>
                 15 €
-                <span class="block text-xs font-normal text-brand-red/70 mt-1"
-                  >Suivi médical</span
-                >
+                <span class="block text-xs font-normal text-brand-red/70 mt-1">Suivi médical</span>
               </button>
               <button
                 data-amount="30"
-                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
-              >
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none">
                 30 €
-                <span class="block text-xs font-normal text-gray-400 mt-1"
-                  >Traitements</span
-                >
+                <span class="block text-xs font-normal text-gray-400 mt-1">Traitements</span>
               </button>
               <button
                 data-amount="50"
-                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
-              >
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none">
                 50 €
-                <span class="block text-xs font-normal text-gray-400 mt-1"
-                  >Fonds d'urgence</span
-                >
+                <span class="block text-xs font-normal text-gray-400 mt-1">Fonds d'urgence</span>
               </button>
             </div>
 
@@ -316,13 +247,10 @@
             <div class="mb-8">
               <label
                 for="custom-amount"
-                class="block text-sm font-medium text-gray-700 mb-2"
-                >Ou saisissez un montant libre</label
-              >
+                class="block text-sm font-medium text-gray-700 mb-2">Ou saisissez un montant libre</label>
               <div class="relative rounded-md shadow-sm">
                 <div
-                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-                >
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <span class="text-gray-500 sm:text-sm">€</span>
                 </div>
                 <input
@@ -331,24 +259,21 @@
                   step="1"
                   id="custom-amount"
                   class="focus:ring-brand-blue focus:border-brand-blue block w-full pl-8 pr-12 py-3 sm:text-sm border-gray-300 rounded-xl bg-gray-50 border transition"
-                  placeholder="0"
-                />
+                  placeholder="0" />
               </div>
             </div>
 
             <!-- Bouton de validation dynamique -->
             <button
               id="submit-btn"
-              class="w-full bg-brand-red text-white font-bold text-lg py-4 rounded-xl hover:bg-brand-redHover transition shadow-lg transform hover:-translate-y-0.5"
-            >
+              class="w-full bg-brand-red text-white font-bold text-lg py-4 rounded-xl hover:bg-brand-redHover transition shadow-lg transform hover:-translate-y-0.5">
               Valider mon don de 50 €
             </button>
 
             <!-- Texte de déduction fiscale dynamique -->
             <p
               id="tax-text"
-              class="text-center text-sm text-gray-500 font-medium mt-4 bg-green-50 text-green-700 py-2 rounded-lg border border-green-100"
-            >
+              class="text-center text-sm text-gray-500 font-medium mt-4 bg-green-50 text-green-700 py-2 rounded-lg border border-green-100">
               Soit 12,50 € après déduction fiscale (France).
             </p>
           </div>
@@ -513,17 +438,14 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <!-- Carte Enfant 1 -->
           <div
-            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition"
-          >
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition">
             <div class="relative h-64 overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Amadou"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
               <div
-                class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide animate-pulse"
-              >
+                class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide animate-pulse">
                 Urgence Vitale
               </div>
             </div>
@@ -545,8 +467,7 @@
               <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
                 <div
                   class="bg-brand-blue h-2 rounded-full"
-                  style="width: 45%"
-                ></div>
+                  style="width: 45%"></div>
               </div>
               <div class="flex justify-between text-sm font-semibold mb-6">
                 <span class="text-brand-blue">450 € collectés</span>
@@ -554,8 +475,7 @@
               </div>
               <a
                 href="#"
-                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition"
-              >
+                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition">
                 Découvrir son histoire
               </a>
             </div>
@@ -563,14 +483,12 @@
 
           <!-- Carte Enfant 2 -->
           <div
-            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition"
-          >
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition">
             <div class="relative h-64 overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1542884748-2b87b36c6b90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Linh"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             </div>
             <div class="p-6">
               <div class="flex justify-between items-baseline mb-2">
@@ -590,8 +508,7 @@
               <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
                 <div
                   class="bg-brand-blue h-2 rounded-full"
-                  style="width: 80%"
-                ></div>
+                  style="width: 80%"></div>
               </div>
               <div class="flex justify-between text-sm font-semibold mb-6">
                 <span class="text-brand-blue">160 € collectés</span>
@@ -599,8 +516,7 @@
               </div>
               <a
                 href="#"
-                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition"
-              >
+                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition">
                 Découvrir son histoire
               </a>
             </div>
@@ -608,14 +524,12 @@
 
           <!-- Carte Enfant 3 -->
           <div
-            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition"
-          >
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition">
             <div class="relative h-64 overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Kamal"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             </div>
             <div class="p-6">
               <div class="flex justify-between items-baseline mb-2">
@@ -635,8 +549,7 @@
               <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
                 <div
                   class="bg-brand-blue h-2 rounded-full"
-                  style="width: 15%"
-                ></div>
+                  style="width: 15%"></div>
               </div>
               <div class="flex justify-between text-sm font-semibold mb-6">
                 <span class="text-brand-blue">75 € collectés</span>
@@ -644,8 +557,7 @@
               </div>
               <a
                 href="#"
-                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition"
-              >
+                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition">
                 Découvrir son histoire
               </a>
             </div>
@@ -655,21 +567,18 @@
         <div class="mt-12 text-center">
           <a
             href="#"
-            class="text-brand-blue font-semibold hover:underline flex items-center justify-center"
-          >
+            class="text-brand-blue font-semibold hover:underline flex items-center justify-center">
             Voir tous les enfants en attente
             <svg
               class="w-4 h-4 ml-2"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+              viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              ></path>
+                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
             </svg>
           </a>
         </div>
@@ -714,12 +623,9 @@
     <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-400 py-12">
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8"
-      >
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div class="col-span-1 md:col-span-2">
-          <span class="text-2xl font-bold text-white tracking-tight mb-4 block"
-            >L'îlot <span class="text-brand-red">Câlins</span></span
-          >
+          <span class="text-2xl font-bold text-white tracking-tight mb-4 block">L'îlot <span class="text-brand-red">Câlins</span></span>
           <p class="mb-4 text-sm max-w-sm">
             Association à but non lucratif reconnue d'utilité publique. Notre
             mission : qu'aucun enfant ne perde la vie faute de moyens financiers
@@ -739,9 +645,7 @@
               <a href="#" class="hover:text-white transition">Nous contacter</a>
             </li>
             <li>
-              <a href="#" class="hover:text-white transition"
-                >Mentions légales</a
-              >
+              <a href="#" class="hover:text-white transition">Mentions légales</a>
             </li>
           </ul>
         </div>
@@ -755,10 +659,10 @@
         </div>
       </div>
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center"
-      >
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center">
         &copy; 2026 L'îlot Câlins. Tous droits réservés.
       </div>
     </footer>
   </body>
+
 </html>
