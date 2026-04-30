@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/output.css" />
+    <title>L'îlot Câlins - Sauvons des vies ensemble</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                blue: "#6da1cc",
+                red: "#ed5f5f",
+                redHover: "#d94c4c", // Une teinte légèrement plus foncée pour le survol
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"], // Police lisible et moderne
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans text-gray-800 bg-gray-50">
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center">
+            <!-- Remplacer par le vrai logo -->
+            <span class="text-2xl font-bold text-brand-blue tracking-tight"
+              >L'îlot <span class="text-brand-red">Câlins</span></span
+            >
+          </div>
+          <div class="hidden md:flex space-x-8 items-center">
+            <a
+              href="#mission"
+              class="text-gray-600 hover:text-brand-blue transition"
+              >Notre Mission</a
+            >
+            <a
+              href="#enfants"
+              class="text-gray-600 hover:text-brand-blue transition"
+              >Les Enfants</a
+            >
+            <a
+              href="#impact"
+              class="text-gray-600 hover:text-brand-blue transition"
+              >Notre Impact</a
+            >
+          </div>
+          <div>
+            <a
+              href="#don"
+              class="bg-brand-red text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-redHover transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              Faire un don vital
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 pt-16 lg:pt-24 px-4 sm:px-6 lg:px-8"
+        >
+          <div class="sm:text-center lg:text-left">
+            <span
+              class="inline-block py-1 px-3 rounded-full bg-brand-red/10 text-brand-red text-sm font-semibold mb-4 border border-brand-red/20"
+              >Urgence absolue</span
+            >
+            <h1
+              class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl leading-tight"
+            >
+              <span class="block">Chaque minute compte</span>
+              <span class="block text-brand-blue">pour leur survie.</span>
+            </h1>
+            <p
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+            >
+              Des milliers d'enfants dans les pays en développement attendent
+              une hospitalisation urgente. Sans vous, ils n'ont aucune chance.
+              Avec vous, l'espoir renaît.
+            </p>
+            <div
+              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
+            >
+              <div class="rounded-full shadow">
+                <a
+                  href="#don"
+                  class="w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-brand-red hover:bg-brand-redHover transition md:py-4 md:text-lg md:px-10"
+                >
+                  Je sauve une vie aujourd'hui
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Espace pour une photo poignante mais digne (pas de misérabilisme) -->
+      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-200">
+        <img
+          class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full opacity-90"
+          src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+          alt="Enfant souriant malgré la maladie"
+        />
+      </div>
+    </header>
+
+    <!-- SECTION DONATION -->
+    <section id="don" class="py-20 bg-brand-blue/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row"
+        >
+          <!-- Explication & Sensibilisation -->
+          <div
+            class="lg:w-5/12 bg-brand-blue p-10 lg:p-12 text-white flex flex-col justify-center"
+          >
+            <h2 class="text-3xl font-bold mb-4">
+              Votre don est leur seul remède.
+            </h2>
+            <p class="text-brand-blue-100 text-lg mb-8 opacity-90">
+              L'îlot Câlins finance en urgence les opérations chirurgicales, les
+              traitements lourds et le matériel médical pour les enfants dont
+              les familles n'ont pas les moyens.
+            </p>
+            <ul class="space-y-4 font-medium">
+              <li class="flex items-center">
+                <svg
+                  class="h-6 w-6 text-white mr-3 opacity-80"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span class="opacity-90">Paiement 100% sécurisé</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="h-6 w-6 text-white mr-3 opacity-80"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span class="opacity-90">Déductible des impôts à 75%</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="h-6 w-6 text-white mr-3 opacity-80"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span class="opacity-90"
+                  >Transparence totale sur l'utilisation</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulaire de don -->
+          <div class="lg:w-7/12 p-10 lg:p-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">
+              Faites votre don aujourd'hui
+            </h3>
+
+            <!-- Toggle Don Unique / Mensuel -->
+            <div class="flex bg-gray-100 p-1 rounded-xl mb-8 relative">
+              <button
+                id="tab-unique"
+                class="flex-1 bg-white shadow-sm text-gray-900 font-bold py-3 rounded-lg text-sm sm:text-base transition focus:outline-none relative z-10"
+              >
+                Don unique
+              </button>
+              <button
+                id="tab-mensuel"
+                class="flex-1 text-gray-500 hover:text-gray-800 font-semibold py-3 rounded-lg text-sm sm:text-base transition focus:outline-none relative z-10"
+              >
+                Don mensuel
+                <span
+                  class="hidden sm:inline-block absolute -top-3 right-4 bg-brand-blue text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full"
+                  >Plus d'impact</span
+                >
+              </button>
+            </div>
+
+            <!-- Grille des montants : Don Unique -->
+            <div
+              id="grid-unique"
+              class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"
+            >
+              <button
+                data-amount="20"
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
+              >
+                20 €
+                <span class="block text-xs font-normal text-gray-400 mt-1"
+                  >Soins basiques</span
+                >
+              </button>
+              <button
+                data-amount="50"
+                class="donation-btn border-2 border-brand-red bg-brand-red/5 text-brand-red rounded-xl py-4 transition font-bold relative focus:outline-none"
+              >
+                <div
+                  class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-red text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full whitespace-nowrap"
+                >
+                  Le plus choisi
+                </div>
+                50 €
+                <span class="block text-xs font-normal text-brand-red/70 mt-1"
+                  >1 nuit d'hôpital</span
+                >
+              </button>
+              <button
+                data-amount="100"
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
+              >
+                100 €
+                <span class="block text-xs font-normal text-gray-400 mt-1"
+                  >Kit chirurgical</span
+                >
+              </button>
+              <button
+                data-amount="250"
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
+              >
+                250 €
+                <span class="block text-xs font-normal text-gray-400 mt-1"
+                  >Sauve une vie</span
+                >
+              </button>
+            </div>
+
+            <!-- Grille des montants : Don Mensuel (Cachée par défaut) -->
+            <div
+              id="grid-mensuel"
+              class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 hidden"
+            >
+              <button
+                data-amount="10"
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
+              >
+                10 €
+                <span class="block text-xs font-normal text-gray-400 mt-1"
+                  >Matériel stérile</span
+                >
+              </button>
+              <button
+                data-amount="15"
+                class="donation-btn border-2 border-brand-red bg-brand-red/5 text-brand-red rounded-xl py-4 transition font-bold relative focus:outline-none"
+              >
+                <div
+                  class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-red text-white text-[10px] uppercase font-bold py-1 px-2 rounded-full whitespace-nowrap"
+                >
+                  Impact régulier
+                </div>
+                15 €
+                <span class="block text-xs font-normal text-brand-red/70 mt-1"
+                  >Suivi médical</span
+                >
+              </button>
+              <button
+                data-amount="30"
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
+              >
+                30 €
+                <span class="block text-xs font-normal text-gray-400 mt-1"
+                  >Traitements</span
+                >
+              </button>
+              <button
+                data-amount="50"
+                class="donation-btn border-2 border-gray-200 text-gray-600 rounded-xl py-4 hover:border-brand-blue hover:text-brand-blue hover:bg-brand-blue/5 transition font-bold focus:outline-none"
+              >
+                50 €
+                <span class="block text-xs font-normal text-gray-400 mt-1"
+                  >Fonds d'urgence</span
+                >
+              </button>
+            </div>
+
+            <!-- Montant libre -->
+            <div class="mb-8">
+              <label
+                for="custom-amount"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Ou saisissez un montant libre</label
+              >
+              <div class="relative rounded-md shadow-sm">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <span class="text-gray-500 sm:text-sm">€</span>
+                </div>
+                <input
+                  type="number"
+                  min="1"
+                  step="1"
+                  id="custom-amount"
+                  class="focus:ring-brand-blue focus:border-brand-blue block w-full pl-8 pr-12 py-3 sm:text-sm border-gray-300 rounded-xl bg-gray-50 border transition"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+
+            <!-- Bouton de validation dynamique -->
+            <button
+              id="submit-btn"
+              class="w-full bg-brand-red text-white font-bold text-lg py-4 rounded-xl hover:bg-brand-redHover transition shadow-lg transform hover:-translate-y-0.5"
+            >
+              Valider mon don de 50 €
+            </button>
+
+            <!-- Texte de déduction fiscale dynamique -->
+            <p
+              id="tax-text"
+              class="text-center text-sm text-gray-500 font-medium mt-4 bg-green-50 text-green-700 py-2 rounded-lg border border-green-100"
+            >
+              Soit 12,50 € après déduction fiscale (France).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script de gestion des dons -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // État initial
+        let isMonthly = false;
+        let currentAmount = 50;
+
+        // Éléments du DOM
+        const tabUnique = document.getElementById("tab-unique");
+        const tabMensuel = document.getElementById("tab-mensuel");
+        const gridUnique = document.getElementById("grid-unique");
+        const gridMensuel = document.getElementById("grid-mensuel");
+        const customAmountInput = document.getElementById("custom-amount");
+        const submitBtn = document.getElementById("submit-btn");
+        const taxText = document.getElementById("tax-text");
+
+        // Classes CSS pour les onglets
+        const activeTabClasses = [
+          "bg-white",
+          "shadow-sm",
+          "text-gray-900",
+          "font-bold",
+        ];
+        const inactiveTabClasses = [
+          "text-gray-500",
+          "hover:text-gray-800",
+          "font-semibold",
+        ];
+
+        // Formateur de monnaie
+        const formatCurrency = (value) => {
+          return new Intl.NumberFormat("fr-FR", {
+            style: "currency",
+            currency: "EUR",
+          }).format(value);
+        };
+
+        // Mettre à jour l'interface utilisateur
+        const updateUI = () => {
+          // 1. Gestion des onglets et des grilles
+          if (isMonthly) {
+            tabUnique.classList.remove(...activeTabClasses);
+            tabUnique.classList.add(...inactiveTabClasses);
+            tabMensuel.classList.remove(...inactiveTabClasses);
+            tabMensuel.classList.add(...activeTabClasses);
+
+            gridUnique.classList.add("hidden");
+            gridMensuel.classList.remove("hidden");
+          } else {
+            tabMensuel.classList.remove(...activeTabClasses);
+            tabMensuel.classList.add(...inactiveTabClasses);
+            tabUnique.classList.remove(...inactiveTabClasses);
+            tabUnique.classList.add(...activeTabClasses);
+
+            gridMensuel.classList.add("hidden");
+            gridUnique.classList.remove("hidden");
+          }
+
+          // 2. Mise en évidence du bouton de montant sélectionné
+          const activeGrid = isMonthly ? gridMensuel : gridUnique;
+          const buttons = activeGrid.querySelectorAll(".donation-btn");
+
+          buttons.forEach((btn) => {
+            const btnAmount = parseInt(btn.getAttribute("data-amount"));
+
+            // Si le montant correspond ET que l'input personnalisé est vide
+            if (btnAmount === currentAmount && customAmountInput.value === "") {
+              btn.classList.add(
+                "border-brand-red",
+                "bg-brand-red/5",
+                "text-brand-red",
+              );
+              btn.classList.remove("border-gray-200", "text-gray-600");
+            } else {
+              btn.classList.remove(
+                "border-brand-red",
+                "bg-brand-red/5",
+                "text-brand-red",
+              );
+              btn.classList.add("border-gray-200", "text-gray-600");
+            }
+          });
+
+          // 3. Calculs et mise à jour des textes
+          const periodSuffix = isMonthly ? " / mois" : "";
+
+          if (currentAmount > 0) {
+            const costAfterDeduction = currentAmount * 0.25; // 75% de déduction = coût réel de 25%
+            submitBtn.textContent = `Valider mon don de ${formatCurrency(currentAmount).replace(",00", "")}${periodSuffix}`;
+            taxText.innerHTML = `🌟 Votre don ne vous coûte en réalité que <strong>${formatCurrency(costAfterDeduction)}${periodSuffix}</strong> après déduction fiscale de 75%.`;
+          } else {
+            submitBtn.textContent = `Saisissez un montant`;
+            taxText.innerHTML = `Saisissez un montant pour estimer votre réduction d'impôts.`;
+          }
+        };
+
+        // Événements : Clics sur les onglets
+        tabUnique.addEventListener("click", () => {
+          isMonthly = false;
+          currentAmount = 50; // Montant par défaut pour le don unique
+          customAmountInput.value = "";
+          updateUI();
+        });
+
+        tabMensuel.addEventListener("click", () => {
+          isMonthly = true;
+          currentAmount = 15; // Montant par défaut pour le don mensuel
+          customAmountInput.value = "";
+          updateUI();
+        });
+
+        // Événements : Clics sur les boutons de montant
+        const setupAmountButtons = (grid) => {
+          const buttons = grid.querySelectorAll(".donation-btn");
+          buttons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              currentAmount = parseInt(btn.getAttribute("data-amount"));
+              customAmountInput.value = ""; // Réinitialiser le champ libre
+              updateUI();
+            });
+          });
+        };
+
+        setupAmountButtons(gridUnique);
+        setupAmountButtons(gridMensuel);
+
+        // Événement : Saisie d'un montant libre
+        customAmountInput.addEventListener("input", (e) => {
+          const value = parseFloat(e.target.value);
+          if (!isNaN(value) && value > 0) {
+            currentAmount = value;
+          } else {
+            currentAmount = 0;
+          }
+          updateUI();
+        });
+
+        // Initialisation au chargement de la page
+        updateUI();
+      });
+    </script>
+    <!-- SECTION ENFANTS (Lien émotionnel) -->
+    <section id="enfants" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Ils ont besoin de vous maintenant
+          </h2>
+          <p class="mt-4 text-xl text-gray-500">
+            Derrière chaque appel aux dons se cache le visage d'un enfant dont
+            l'avenir ne tient qu'à un fil.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Carte Enfant 1 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Amadou"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide animate-pulse"
+              >
+                Urgence Vitale
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="text-2xl font-bold text-gray-900">
+                  Amadou,
+                  <span class="text-lg font-normal text-gray-500">4 ans</span>
+                </h3>
+              </div>
+              <p class="text-brand-blue font-semibold text-sm mb-4">
+                📍 Sénégal • Chirurgie cardiaque
+              </p>
+              <p class="text-gray-600 mb-6 line-clamp-3">
+                Amadou souffre d'une malformation cardiaque sévère. Sans une
+                opération dans les 15 prochains jours, son cœur risque de
+                lâcher. L'hôpital est prêt, il ne manque que le financement.
+              </p>
+              <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                <div
+                  class="bg-brand-blue h-2 rounded-full"
+                  style="width: 45%"
+                ></div>
+              </div>
+              <div class="flex justify-between text-sm font-semibold mb-6">
+                <span class="text-brand-blue">450 € collectés</span>
+                <span class="text-gray-500">Objectif: 1 000 €</span>
+              </div>
+              <a
+                href="#"
+                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition"
+              >
+                Découvrir son histoire
+              </a>
+            </div>
+          </div>
+
+          <!-- Carte Enfant 2 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1542884748-2b87b36c6b90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Linh"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="text-2xl font-bold text-gray-900">
+                  Linh,
+                  <span class="text-lg font-normal text-gray-500">7 ans</span>
+                </h3>
+              </div>
+              <p class="text-brand-blue font-semibold text-sm mb-4">
+                📍 Vietnam • Traitement antibiotique lourd
+              </p>
+              <p class="text-gray-600 mb-6 line-clamp-3">
+                Atteinte d'une infection respiratoire aiguë, Linh est sous
+                assistance. Ses parents, agriculteurs, ont épuisé leurs
+                économies. Elle a besoin de médicaments onéreux d'urgence.
+              </p>
+              <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                <div
+                  class="bg-brand-blue h-2 rounded-full"
+                  style="width: 80%"
+                ></div>
+              </div>
+              <div class="flex justify-between text-sm font-semibold mb-6">
+                <span class="text-brand-blue">160 € collectés</span>
+                <span class="text-gray-500">Objectif: 200 €</span>
+              </div>
+              <a
+                href="#"
+                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition"
+              >
+                Découvrir son histoire
+              </a>
+            </div>
+          </div>
+
+          <!-- Carte Enfant 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Kamal"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="text-2xl font-bold text-gray-900">
+                  Kamal,
+                  <span class="text-lg font-normal text-gray-500">2 ans</span>
+                </h3>
+              </div>
+              <p class="text-brand-blue font-semibold text-sm mb-4">
+                📍 Madagascar • Réanimation néonatale
+              </p>
+              <p class="text-gray-600 mb-6 line-clamp-3">
+                Né grand prématuré, le petit Kamal se bat pour respirer dans un
+                service sous-équipé. Chaque jour d'incubation coûte de l'argent
+                que l'hôpital ne peut plus avancer.
+              </p>
+              <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                <div
+                  class="bg-brand-blue h-2 rounded-full"
+                  style="width: 15%"
+                ></div>
+              </div>
+              <div class="flex justify-between text-sm font-semibold mb-6">
+                <span class="text-brand-blue">75 € collectés</span>
+                <span class="text-gray-500">Objectif: 500 €</span>
+              </div>
+              <a
+                href="#"
+                class="block text-center w-full bg-white border-2 border-brand-red text-brand-red font-semibold py-2 rounded-xl hover:bg-brand-red hover:text-white transition"
+              >
+                Découvrir son histoire
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="#"
+            class="text-brand-blue font-semibold hover:underline flex items-center justify-center"
+          >
+            Voir tous les enfants en attente
+            <svg
+              class="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION STATISTIQUES (Preuve sociale et confiance) -->
+    <section id="impact" class="bg-brand-blue py-16 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div class="text-4xl md:text-5xl font-extrabold mb-2">1 240</div>
+            <div class="text-brand-blue-100 font-medium">
+              Enfants soignés depuis 2020
+            </div>
+          </div>
+          <div>
+            <div class="text-4xl md:text-5xl font-extrabold mb-2">15</div>
+            <div class="text-brand-blue-100 font-medium">
+              Pays d'intervention
+            </div>
+          </div>
+          <div>
+            <div class="text-4xl md:text-5xl font-extrabold mb-2">100%</div>
+            <div class="text-brand-blue-100 font-medium">
+              Des dons reversés au médical*
+            </div>
+          </div>
+          <div>
+            <div class="text-4xl md:text-5xl font-extrabold mb-2">24h</div>
+            <div class="text-brand-blue-100 font-medium">
+              Délai d'intervention moyen
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-xs opacity-60 mt-10">
+          *Nos frais de fonctionnement sont couverts par des mécènes privés.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <div class="col-span-1 md:col-span-2">
+          <span class="text-2xl font-bold text-white tracking-tight mb-4 block"
+            >L'îlot <span class="text-brand-red">Câlins</span></span
+          >
+          <p class="mb-4 text-sm max-w-sm">
+            Association à but non lucratif reconnue d'utilité publique. Notre
+            mission : qu'aucun enfant ne perde la vie faute de moyens financiers
+            pour se faire soigner.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Liens rapides</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="#" class="hover:text-white transition">Faire un don</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Bénévolat</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Nous contacter</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition"
+                >Mentions légales</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li>12 rue de l'Espoir, 75000 Paris</li>
+            <li>contact@ilot-calins.org</li>
+            <li>+33 1 23 45 67 89</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center"
+      >
+        &copy; 2026 L'îlot Câlins. Tous droits réservés.
+      </div>
+    </footer>
+  </body>
+</html>
