@@ -2,10 +2,19 @@
 
 @source "./**/*.php";
 
+@font-face {
+  font-family: "MaPoliceTitre";
+  src: url("./assets/fonts/GoogleSansFlex-VariableFont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-brand-blue: #6da1cc;
   --color-brand-red: #ed5f5f;
   --color-brand-redHover: #d94c4c;
 
   --font-sans: "Inter", sans-serif;
+  --font-title: "MaPoliceTitre", sans-serif;
 }
